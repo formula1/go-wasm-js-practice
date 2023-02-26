@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  static:
+    image: halverneus/static-file-server
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - FOLDER=/static
+    volumes:
+      - ./static:/static
